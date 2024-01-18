@@ -20,11 +20,11 @@
 		CFCF48652B57E84B00587474 /* MainTabBarFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCF48642B57E84B00587474 /* MainTabBarFactory.swift */; };
 		CFCF48672B57E86A00587474 /* MainTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCF48662B57E86A00587474 /* MainTabBarCoordinator.swift */; };
 		CFCF48692B57E87C00587474 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCF48682B57E87C00587474 /* Coordinator.swift */; };
-		CFCF486B2B57EA2E00587474 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCF486A2B57EA2E00587474 /* HomeViewController.swift */; };
+		CFCF486B2B57EA2E00587474 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCF486A2B57EA2E00587474 /* UsersViewController.swift */; };
 		CFCF486D2B57EA5700587474 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCF486C2B57EA5700587474 /* MenuViewController.swift */; };
-		CFCF486F2B57EA9400587474 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCF486E2B57EA9400587474 /* HomeCoordinator.swift */; };
+		CFCF486F2B57EA9400587474 /* UsersCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCF486E2B57EA9400587474 /* UsersCoordinator.swift */; };
 		CFCF48712B57EA9A00587474 /* MenuCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCF48702B57EA9A00587474 /* MenuCoordinator.swift */; };
-		CFCF48732B57EAA100587474 /* HomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCF48722B57EAA100587474 /* HomeFactory.swift */; };
+		CFCF48732B57EAA100587474 /* UsersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCF48722B57EAA100587474 /* UsersFactory.swift */; };
 		CFCF48752B57EAA600587474 /* MenuFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCF48742B57EAA600587474 /* MenuFactory.swift */; };
 		CFCF487B2B57F06100587474 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCF487A2B57F06100587474 /* UIViewController+.swift */; };
 		CFCF488A2B57F23E00587474 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCF48892B57F23E00587474 /* LoginViewController.swift */; };
@@ -47,7 +47,7 @@
 		CFCF48D32B581D3600587474 /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCF48D22B581D3600587474 /* Gender.swift */; };
 		CFCF48D62B581DB400587474 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = CFCF48D52B581DB400587474 /* SDWebImage */; };
 		CFCF48D82B581DB400587474 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CFCF48D72B581DB400587474 /* SDWebImageMapKit */; };
-		CFCF48DA2B581DF700587474 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCF48D92B581DF700587474 /* HomeViewModel.swift */; };
+		CFCF48DA2B581DF700587474 /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCF48D92B581DF700587474 /* UsersViewModel.swift */; };
 		CFCF48E22B581EA300587474 /* StateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCF48E12B581EA300587474 /* StateController.swift */; };
 		CFCF48E42B581EF200587474 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCF48E32B581EF200587474 /* BaseViewModel.swift */; };
 		CFCF48E72B5821AC00587474 /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCF48E62B5821AC00587474 /* AppContainer.swift */; };
@@ -94,11 +94,11 @@
 		CFCF48642B57E84B00587474 /* MainTabBarFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarFactory.swift; sourceTree = "<group>"; };
 		CFCF48662B57E86A00587474 /* MainTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarCoordinator.swift; sourceTree = "<group>"; };
 		CFCF48682B57E87C00587474 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		CFCF486A2B57EA2E00587474 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		CFCF486A2B57EA2E00587474 /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
 		CFCF486C2B57EA5700587474 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		CFCF486E2B57EA9400587474 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		CFCF486E2B57EA9400587474 /* UsersCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersCoordinator.swift; sourceTree = "<group>"; };
 		CFCF48702B57EA9A00587474 /* MenuCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCoordinator.swift; sourceTree = "<group>"; };
-		CFCF48722B57EAA100587474 /* HomeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFactory.swift; sourceTree = "<group>"; };
+		CFCF48722B57EAA100587474 /* UsersFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersFactory.swift; sourceTree = "<group>"; };
 		CFCF48742B57EAA600587474 /* MenuFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuFactory.swift; sourceTree = "<group>"; };
 		CFCF487A2B57F06100587474 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		CFCF48892B57F23E00587474 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -119,7 +119,7 @@
 		CFCF48CE2B581BE300587474 /* ItemUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemUserViewModel.swift; sourceTree = "<group>"; };
 		CFCF48D02B581C2000587474 /* ResultRandomUsersDTO+Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResultRandomUsersDTO+Mapper.swift"; sourceTree = "<group>"; };
 		CFCF48D22B581D3600587474 /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
-		CFCF48D92B581DF700587474 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		CFCF48D92B581DF700587474 /* UsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
 		CFCF48E12B581EA300587474 /* StateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateController.swift; sourceTree = "<group>"; };
 		CFCF48E32B581EF200587474 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		CFCF48E62B5821AC00587474 /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
@@ -243,7 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				CFCF48992B5810FC00587474 /* LaunchScreen */,
-				CFCF487D2B57F1AC00587474 /* Home */,
+				CFCF487D2B57F1AC00587474 /* Users */,
 				CFCF48872B57F22000587474 /* LogIn */,
 				CFCF487F2B57F1BB00587474 /* Main */,
 				CFCF487E2B57F1AE00587474 /* Menu */,
@@ -251,14 +251,14 @@
 			path = Scene;
 			sourceTree = "<group>";
 		};
-		CFCF487D2B57F1AC00587474 /* Home */ = {
+		CFCF487D2B57F1AC00587474 /* Users */ = {
 			isa = PBXGroup;
 			children = (
 				CFCF48A42B58133D00587474 /* Data */,
 				CFCF48A32B58133B00587474 /* Domain */,
 				CFCF48812B57F1CE00587474 /* Presentation */,
 			);
-			path = Home;
+			path = Users;
 			sourceTree = "<group>";
 		};
 		CFCF487E2B57F1AE00587474 /* Menu */ = {
@@ -309,7 +309,7 @@
 		CFCF488F2B58108200587474 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CFCF486A2B57EA2E00587474 /* HomeViewController.swift */,
+				CFCF486A2B57EA2E00587474 /* UsersViewController.swift */,
 				CFCF48A12B58128200587474 /* ItemUserTableViewCell.swift */,
 			);
 			path = View;
@@ -318,7 +318,7 @@
 		CFCF48902B58108700587474 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				CFCF486E2B57EA9400587474 /* HomeCoordinator.swift */,
+				CFCF486E2B57EA9400587474 /* UsersCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -402,7 +402,7 @@
 		CFCF489B2B58117100587474 /* Factory */ = {
 			isa = PBXGroup;
 			children = (
-				CFCF48722B57EAA100587474 /* HomeFactory.swift */,
+				CFCF48722B57EAA100587474 /* UsersFactory.swift */,
 			);
 			path = Factory;
 			sourceTree = "<group>";
@@ -559,7 +559,7 @@
 			isa = PBXGroup;
 			children = (
 				CFCF48CE2B581BE300587474 /* ItemUserViewModel.swift */,
-				CFCF48D92B581DF700587474 /* HomeViewModel.swift */,
+				CFCF48D92B581DF700587474 /* UsersViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -782,15 +782,15 @@
 				CFCF488A2B57F23E00587474 /* LoginViewController.swift in Sources */,
 				CFCF48672B57E86A00587474 /* MainTabBarCoordinator.swift in Sources */,
 				CFCF48B82B5814DB00587474 /* ResultRandomUsersDTO.swift in Sources */,
-				CFCF48DA2B581DF700587474 /* HomeViewModel.swift in Sources */,
+				CFCF48DA2B581DF700587474 /* UsersViewModel.swift in Sources */,
 				CFCF48E22B581EA300587474 /* StateController.swift in Sources */,
 				CFCF488C2B57F33600587474 /* LogInFactory.swift in Sources */,
 				CF24BC2E2B58E60D00F47DAF /* LastPageValidationUseCase.swift in Sources */,
-				CFCF48732B57EAA100587474 /* HomeFactory.swift in Sources */,
+				CFCF48732B57EAA100587474 /* UsersFactory.swift in Sources */,
 				CFCF48C62B58181400587474 /* HttpStatusResponse.swift in Sources */,
 				CFCF48C02B58164E00587474 /* ApiError.swift in Sources */,
 				CFCF482E2B57E7B100587474 /* AppDelegate.swift in Sources */,
-				CFCF486F2B57EA9400587474 /* HomeCoordinator.swift in Sources */,
+				CFCF486F2B57EA9400587474 /* UsersCoordinator.swift in Sources */,
 				CFCF48D12B581C2000587474 /* ResultRandomUsersDTO+Mapper.swift in Sources */,
 				CFCF48692B57E87C00587474 /* Coordinator.swift in Sources */,
 				CFCF48B42B5814B000587474 /* UserNameDTO.swift in Sources */,
@@ -802,7 +802,7 @@
 				CFCF48F42B5825FC00587474 /* MessageDisplayable.swift in Sources */,
 				CFCF48E42B581EF200587474 /* BaseViewModel.swift in Sources */,
 				CF24BC302B58E8F300F47DAF /* UITableviewController+SpinnerLast.swift in Sources */,
-				CFCF486B2B57EA2E00587474 /* HomeViewController.swift in Sources */,
+				CFCF486B2B57EA2E00587474 /* UsersViewController.swift in Sources */,
 				CFCF48C82B581A2700587474 /* RandomUsersRepositoryImpl.swift in Sources */,
 				CFCF487B2B57F06100587474 /* UIViewController+.swift in Sources */,
 				CFCF48CC2B581B0B00587474 /* LoadRandomUsersUseCase.swift in Sources */,

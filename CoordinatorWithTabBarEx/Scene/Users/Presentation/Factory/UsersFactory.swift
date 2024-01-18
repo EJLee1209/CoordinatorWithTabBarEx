@@ -6,30 +6,30 @@
 //
 import UIKit
 
-protocol HomeFactory {
-    func makeModule(coordinator: HomeViewControllerCoordinator) -> UIViewController
+protocol UsersFactory {
+    func makeModule(coordinator: UsersViewControllerCoordinator) -> UIViewController
 }
 
-struct HomeFactoryImpl: HomeFactory {
+struct UsersFactoryImpl: UsersFactory {
     private(set) var endPoint: String
     private(set) var appContainer: AppContainer
     
-    func makeModule(coordinator: HomeViewControllerCoordinator) -> UIViewController {
+    func makeModule(coordinator: UsersViewControllerCoordinator) -> UIViewController {
         let randomUsersRepository = RandomUsersRepositoryImpl(apiClient: appContainer.apiClient)
         let loadRandomUsersUseCase = LoadRandomUsersUseCaseImpl(
             randomUsersRepository: randomUsersRepository,
             endPoint: endPoint
         )
         let lastPageValidationUseCase = LastPageValidationUseCaseImpl()
-        let homeViewModel = HomeViewModelImpl(
+        let usersViewModel = UsersViewModelImpl(
             loadRandomUsersUseCase: loadRandomUsersUseCase,
             lastPageValidationUseCase: lastPageValidationUseCase
         )
-        let controller = HomeViewController(
-            viewModel: homeViewModel,
+        let controller = UsersViewController(
+            viewModel: usersViewModel,
             coordinator: coordinator
         )
-        controller.title = "Home"
+        controller.title = "Users"
         return controller
     }
 }

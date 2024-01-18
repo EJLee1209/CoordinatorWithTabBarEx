@@ -7,19 +7,19 @@
 
 import UIKit
 
-protocol HomeCoordinatorDelegate: AnyObject {
+protocol UsersCoordinatorDelegate: AnyObject {
     func didFinishLogOut()
 }
 
-final class HomeCoordinator: Coordinator {
+final class UsersCoordinator: Coordinator {
     var navigation: UINavigationController
-    private let factory: HomeFactory
-    weak var delegate: HomeCoordinatorDelegate?
+    private let factory: UsersFactory
+    weak var delegate: UsersCoordinatorDelegate?
     
     init(
         navigation: UINavigationController,
-        factory: HomeFactory,
-        delegate: HomeCoordinatorDelegate
+        factory: UsersFactory,
+        delegate: UsersCoordinatorDelegate
     ) {
         self.navigation = navigation
         self.factory = factory
@@ -29,15 +29,15 @@ final class HomeCoordinator: Coordinator {
     func start() {
         let controller = factory.makeModule(coordinator: self)
         controller.setupTabBarItem(
-            title: "Home",
-            image: "house",
-            selectedImage: "house.fill"
+            title: "Users",
+            image: "person",
+            selectedImage: "person.fill"
         )
         navigation.pushViewController(controller, animated: true)
     }
 }
 
-extension HomeCoordinator: HomeViewControllerCoordinator {
+extension UsersCoordinator: UsersViewControllerCoordinator {
     func didFinishLogOut() {
         delegate?.didFinishLogOut()
     }

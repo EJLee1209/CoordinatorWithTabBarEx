@@ -7,13 +7,13 @@
 
 import Combine
 
-protocol HomeViewModel: BaseViewModel {
+protocol UsersViewModel: BaseViewModel {
     var itemUsersCount: Int { get }
     var isLastPage: Bool { get }
     func makeItemUserViewModel(row: Int) -> ItemUserViewModel
 }
 
-final class HomeViewModelImpl: HomeViewModel {
+final class UsersViewModelImpl: UsersViewModel {
     var itemUsersCount: Int {
         users.count
     }

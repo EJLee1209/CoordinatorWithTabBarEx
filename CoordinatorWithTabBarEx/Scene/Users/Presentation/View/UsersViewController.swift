@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  UsersViewController.swift
 //  CoordinatorWithTabBarEx
 //
 //  Created by 이은재 on 1/17/24.
@@ -8,22 +8,22 @@
 import UIKit
 import Combine
 
-protocol HomeViewControllerCoordinator: AnyObject {
+protocol UsersViewControllerCoordinator: AnyObject {
     func didFinishLogOut()
 }
 
-final class HomeViewController: UITableViewController {
+final class UsersViewController: UITableViewController {
     //MARK: - Properties
     
-    private let viewModel: HomeViewModel
-    weak var coordinator: HomeViewControllerCoordinator?
+    private let viewModel: UsersViewModel
+    weak var coordinator: UsersViewControllerCoordinator?
     
     private var cancellable = Set<AnyCancellable>()
     
     //MARK: - Life Cycle
     init(
-        viewModel: HomeViewModel,
-        coordinator: HomeViewControllerCoordinator?
+        viewModel: UsersViewModel,
+        coordinator: UsersViewControllerCoordinator?
     ) {
         self.viewModel = viewModel
         self.coordinator = coordinator
@@ -87,7 +87,7 @@ final class HomeViewController: UITableViewController {
 }
 
 //MARK: - DataSource
-extension HomeViewController {
+extension UsersViewController {
     override func tableView(
         _ tableView: UITableView,
         numberOfRowsInSection section: Int
@@ -110,7 +110,7 @@ extension HomeViewController {
 }
 
 //MARK: - Delegate
-extension HomeViewController {
+extension UsersViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
@@ -124,4 +124,4 @@ extension HomeViewController {
     }
 }
 
-extension HomeViewController: MessageDisplayable {}
+extension UsersViewController: MessageDisplayable {}

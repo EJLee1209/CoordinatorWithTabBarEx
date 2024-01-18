@@ -13,7 +13,7 @@ final class MainTabBarCoordinator {
     private let factory: MainTabBarFactory
     private let window: UIWindow
     
-    private var homeCoordinator: Coordinator?
+    private var usersCoordinator: Coordinator?
     private var menuCoordinator: Coordinator?
     private var logInCoordinator: Coordinator?
     
@@ -26,10 +26,10 @@ final class MainTabBarCoordinator {
     func start() {
         mainTabBar = factory.makeModule()
         
-        let homeCoordinator = factory.makeHomeCoordinator(delegate: self)
-        let homeNavigationController = homeCoordinator.navigation
-        homeCoordinator.start()
-        self.homeCoordinator = homeCoordinator
+        let usersCoordinator = factory.makeUsersCoordinator(delegate: self)
+        let usersNavigationController = usersCoordinator.navigation
+        usersCoordinator.start()
+        self.usersCoordinator = usersCoordinator
         
         let menuCoordinator = factory.makeMenuCoordinator()
         let menuNavigationController = menuCoordinator.navigation
@@ -37,7 +37,7 @@ final class MainTabBarCoordinator {
         self.menuCoordinator = menuCoordinator
         
         mainTabBar?.viewControllers = [
-            homeNavigationController, menuNavigationController
+            usersNavigationController, menuNavigationController
         ]
         
         window.rootViewController = mainTabBar
@@ -45,12 +45,12 @@ final class MainTabBarCoordinator {
     }
 }
 
-extension MainTabBarCoordinator: HomeCoordinatorDelegate {
+extension MainTabBarCoordinator: UsersCoordinatorDelegate {
     func didFinishLogOut() {
-        guard let homeNavigationController = homeCoordinator?.navigation else { return }
+        guard let usersNavigationController = usersCoordinator?.navigation else { return }
         
         let logInCoordinator = factory.makeLogInCoordinator(
-            navigation: homeNavigationController,
+            navigation: usersNavigationController,
             delegate: self
         )
         logInCoordinator.start()
@@ -60,9 +60,9 @@ extension MainTabBarCoordinator: HomeCoordinatorDelegate {
 
 extension MainTabBarCoordinator: LoginCoordinatorDelegate {
     func didFinishLogIn() {
-        guard let homeNavigationController = homeCoordinator?.navigation else { return }
+        guard let usersNavigationController = usersCoordinator?.navigation else { return }
         
-        homeNavigationController.dismiss(animated: true)
+        usersNavigationController.dismiss(animated: true)
         self.logInCoordinator = nil
     }
 }

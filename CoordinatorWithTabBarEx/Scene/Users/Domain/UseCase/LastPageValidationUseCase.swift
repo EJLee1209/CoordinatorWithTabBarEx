@@ -18,7 +18,7 @@ protocol LastPageValidationUseCase {
 struct LastPageValidationUseCaseImpl: LastPageValidationUseCase {
     var isLastPage: Bool = false
     private let threshold = 5
-    private let maxItemCount = 300
+    private let maxItemCount = 1000
     
     mutating func checkAndMoreLoadItems(
         renderedRow: Int,

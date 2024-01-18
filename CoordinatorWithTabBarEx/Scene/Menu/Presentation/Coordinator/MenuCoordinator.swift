@@ -20,8 +20,8 @@ final class MenuCoordinator: Coordinator {
         let controller = factory.makeModule()
         controller.setupTabBarItem(
             title: "Menu",
-            image: "person",
-            selectedImage: "person.fill"
+            image: "line.3.horizontal",
+            selectedImage: "line.3.horizontal"
         )
         navigation.pushViewController(controller, animated: true)
     }

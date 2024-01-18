@@ -10,8 +10,8 @@ import UIKit
 protocol MainTabBarFactory {
     func makeModule() -> UITabBarController
     
-    func makeHomeCoordinator(
-        delegate: HomeCoordinatorDelegate
+    func makeUsersCoordinator(
+        delegate: UsersCoordinatorDelegate
     ) -> Coordinator
     
     func makeMenuCoordinator() -> Coordinator
@@ -30,14 +30,14 @@ struct MainTabBarFactoryImpl: MainTabBarFactory {
         MainTabBarController()
     }
     
-    func makeHomeCoordinator(delegate: HomeCoordinatorDelegate) -> Coordinator {
-        let homeFactory = HomeFactoryImpl(
+    func makeUsersCoordinator(delegate: UsersCoordinatorDelegate) -> Coordinator {
+        let usersFactory = UsersFactoryImpl(
             endPoint: EndPoint.BaseUrl,
             appContainer: appContainer
         )
-        return HomeCoordinator(
+        return UsersCoordinator(
             navigation: UINavigationController(),
-            factory: homeFactory,
+            factory: usersFactory,
             delegate: delegate
         )
     }
