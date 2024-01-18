@@ -9,22 +9,31 @@ import Combine
 
 protocol HomeViewModel: BaseViewModel {
     var itemUsersCount: Int { get }
-    
+    var isLastPage: Bool { get }
     func makeItemUserViewModel(row: Int) -> ItemUserViewModel
 }
 
 final class HomeViewModelImpl: HomeViewModel {
     var itemUsersCount: Int {
-        return users.count
+        users.count
+    }
+    
+    var isLastPage: Bool {
+        lastPageValidationUseCase.isLastPage
     }
     
     var state: PassthroughSubject<StateController, Never> = .init()
     
     private let loadRandomUsersUseCase: LoadRandomUsersUseCase
+    private var lastPageValidationUseCase: LastPageValidationUseCase
     private var users: [User] = []
     
-    init(loadRandomUsersUseCase: LoadRandomUsersUseCase) {
+    init(
+        loadRandomUsersUseCase: LoadRandomUsersUseCase,
+        lastPageValidationUseCase: LastPageValidationUseCase
+    ) {
         self.loadRandomUsersUseCase = loadRandomUsersUseCase
+        self.lastPageValidationUseCase = lastPageValidationUseCase
     }
     
     func viewDidLoad() {
@@ -39,7 +48,7 @@ final class HomeViewModelImpl: HomeViewModel {
     private func updateRandomUsers(useCaseResult: Result<[User], Error>) {
         switch useCaseResult {
         case .success(let users):
-            self.users = users
+            self.users.append(contentsOf: users)
             state.send(.success)
         case .failure(let error):
             state.send(.fail(error: error.localizedDescription))
@@ -47,9 +56,18 @@ final class HomeViewModelImpl: HomeViewModel {
     }
     
     func makeItemUserViewModel(row: Int) -> ItemUserViewModel {
+        checkAndMoreItems(row: row)
         let user = users[row]
         let itemUserViewModel = ItemUserViewModel(user: user)
         return itemUserViewModel
+    }
+    
+    private func checkAndMoreItems(row: Int) {
+        lastPageValidationUseCase.checkAndMoreLoadItems(
+            renderedRow: row,
+            itemsCount: users.count,
+            action: viewDidLoad
+        )
     }
     
 }

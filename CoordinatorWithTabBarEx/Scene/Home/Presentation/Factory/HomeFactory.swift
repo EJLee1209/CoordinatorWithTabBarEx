@@ -20,7 +20,11 @@ struct HomeFactoryImpl: HomeFactory {
             randomUsersRepository: randomUsersRepository,
             endPoint: endPoint
         )
-        let homeViewModel = HomeViewModelImpl(loadRandomUsersUseCase: loadRandomUsersUseCase)
+        let lastPageValidationUseCase = LastPageValidationUseCaseImpl()
+        let homeViewModel = HomeViewModelImpl(
+            loadRandomUsersUseCase: loadRandomUsersUseCase,
+            lastPageValidationUseCase: lastPageValidationUseCase
+        )
         let controller = HomeViewController(
             viewModel: homeViewModel,
             coordinator: coordinator

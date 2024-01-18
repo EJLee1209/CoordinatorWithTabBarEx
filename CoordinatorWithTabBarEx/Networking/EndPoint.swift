@@ -6,5 +6,5 @@
 //
 
 struct EndPoint {
-    static let BaseUrl = "https://randomuser.me/api/?results=100"
+    static let BaseUrl = "https://randomuser.me/api/?results=20"
 }

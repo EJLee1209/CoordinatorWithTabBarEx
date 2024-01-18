@@ -40,6 +40,7 @@ final class HomeViewController: UITableViewController {
         
         configUI()
         stateController()
+        addSpinnerLastCell()
         viewModel.viewDidLoad()
     }
     
@@ -69,11 +70,9 @@ final class HomeViewController: UITableViewController {
     }
     
     private func updateUI(state: StateController) {
-        hideSpinner()
-        
         switch state {
         case .loading:
-            showSpinner()
+            break
         case .success:
             tableView.reloadData()
         case .fail(let error):
@@ -115,6 +114,14 @@ extension HomeViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
+    
+    override func tableView(
+        _ tableView: UITableView,
+        willDisplay cell: UITableViewCell,
+        forRowAt indexPath: IndexPath
+    ) {
+        tableView.tableFooterView?.isHidden = viewModel.isLastPage
+    }
 }
 
-extension HomeViewController: MessageDisplayable, SpinnerDisplayable {}
+extension HomeViewController: MessageDisplayable {}
