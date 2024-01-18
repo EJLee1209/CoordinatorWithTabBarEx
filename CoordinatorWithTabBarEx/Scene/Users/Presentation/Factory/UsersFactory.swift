@@ -10,7 +10,8 @@ protocol UsersFactory {
     func makeModule(coordinator: UsersViewControllerCoordinator) -> UIViewController
     
     func makeUserDetailCoordinator(
-        navigation: UINavigationController
+        navigation: UINavigationController,
+        user: User
     ) -> Coordinator
 }
 
@@ -38,9 +39,10 @@ struct UsersFactoryImpl: UsersFactory {
     }
     
     func makeUserDetailCoordinator(
-        navigation: UINavigationController
+        navigation: UINavigationController,
+        user: User
     ) -> Coordinator {
-        let userDetailFactory = UserDetailFactoryImpl()
+        let userDetailFactory = UserDetailFactoryImpl(user: user)
         return UserDetailCoordinator(
             navigation: navigation,
             factory: userDetailFactory

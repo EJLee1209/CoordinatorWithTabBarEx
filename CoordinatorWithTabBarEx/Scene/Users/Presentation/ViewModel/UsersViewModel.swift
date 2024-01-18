@@ -11,6 +11,7 @@ protocol UsersViewModel: BaseViewModel {
     var itemUsersCount: Int { get }
     var isLastPage: Bool { get }
     func makeItemUserViewModel(row: Int) -> ItemUserViewModel
+    func getUser(row: Int) -> User
 }
 
 final class UsersViewModelImpl: UsersViewModel {
@@ -68,6 +69,10 @@ final class UsersViewModelImpl: UsersViewModel {
             itemsCount: users.count,
             action: viewDidLoad
         )
+    }
+    
+    func getUser(row: Int) -> User {
+        return users[row]
     }
     
 }

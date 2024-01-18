@@ -12,6 +12,7 @@
 		CF24BC342B58EBBE00F47DAF /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF24BC332B58EBBE00F47DAF /* UserDetailViewController.swift */; };
 		CF24BC3A2B58EBF400F47DAF /* UserDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF24BC392B58EBF400F47DAF /* UserDetailCoordinator.swift */; };
 		CF24BC3C2B58EC1400F47DAF /* UserDetailFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF24BC3B2B58EC1400F47DAF /* UserDetailFactory.swift */; };
+		CF24BC3E2B58EEB600F47DAF /* UserDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF24BC3D2B58EEB600F47DAF /* UserDetailViewModel.swift */; };
 		CFCF482E2B57E7B100587474 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCF482D2B57E7B100587474 /* AppDelegate.swift */; };
 		CFCF48302B57E7B100587474 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCF482F2B57E7B100587474 /* SceneDelegate.swift */; };
 		CFCF48372B57E7B300587474 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFCF48362B57E7B300587474 /* Assets.xcassets */; };
@@ -85,6 +86,7 @@
 		CF24BC332B58EBBE00F47DAF /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 		CF24BC392B58EBF400F47DAF /* UserDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailCoordinator.swift; sourceTree = "<group>"; };
 		CF24BC3B2B58EC1400F47DAF /* UserDetailFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailFactory.swift; sourceTree = "<group>"; };
+		CF24BC3D2B58EEB600F47DAF /* UserDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewModel.swift; sourceTree = "<group>"; };
 		CFCF482A2B57E7B100587474 /* CoordinatorWithTabBarEx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoordinatorWithTabBarEx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFCF482D2B57E7B100587474 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFCF482F2B57E7B100587474 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				CF24BC332B58EBBE00F47DAF /* UserDetailViewController.swift */,
+				CF24BC3D2B58EEB600F47DAF /* UserDetailViewModel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -862,6 +865,7 @@
 				CFCF48F42B5825FC00587474 /* MessageDisplayable.swift in Sources */,
 				CFCF48E42B581EF200587474 /* BaseViewModel.swift in Sources */,
 				CF24BC302B58E8F300F47DAF /* UITableviewController+SpinnerLast.swift in Sources */,
+				CF24BC3E2B58EEB600F47DAF /* UserDetailViewModel.swift in Sources */,
 				CFCF486B2B57EA2E00587474 /* UsersViewController.swift in Sources */,
 				CFCF48C82B581A2700587474 /* RandomUsersRepositoryImpl.swift in Sources */,
 				CFCF487B2B57F06100587474 /* UIViewController+.swift in Sources */,

@@ -12,7 +12,10 @@ protocol UserDetailFactory {
 }
 
 struct UserDetailFactoryImpl: UserDetailFactory {
+    private(set) var user: User
+    
     func makeModule() -> UIViewController {
-        UserDetailViewController()
+        let userDetailViewModel = UserDetailViewModelImpl(user: user)
+        return UserDetailViewController(viewModel: userDetailViewModel)
     }
 }

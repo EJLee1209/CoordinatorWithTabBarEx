@@ -42,8 +42,11 @@ extension UsersCoordinator: UsersViewControllerCoordinator {
         delegate?.didFinishLogOut()
     }
     
-    func didSelectUser() {
-        let userDetailCoordinator = factory.makeUserDetailCoordinator(navigation: navigation)
+    func didSelectUser(user: User) {
+        let userDetailCoordinator = factory.makeUserDetailCoordinator(
+            navigation: navigation,
+            user: user
+        )
         userDetailCoordinator.start()
     }
 }
