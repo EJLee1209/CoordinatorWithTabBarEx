@@ -10,6 +10,7 @@ import Combine
 
 protocol UsersViewControllerCoordinator: AnyObject {
     func didFinishLogOut()
+    func didSelectUser()
 }
 
 final class UsersViewController: UITableViewController {
@@ -113,6 +114,8 @@ extension UsersViewController {
 extension UsersViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        coordinator?.didSelectUser()
     }
     
     override func tableView(

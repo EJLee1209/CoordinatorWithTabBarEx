@@ -8,6 +8,10 @@ import UIKit
 
 protocol UsersFactory {
     func makeModule(coordinator: UsersViewControllerCoordinator) -> UIViewController
+    
+    func makeUserDetailCoordinator(
+        navigation: UINavigationController
+    ) -> Coordinator
 }
 
 struct UsersFactoryImpl: UsersFactory {
@@ -31,5 +35,15 @@ struct UsersFactoryImpl: UsersFactory {
         )
         controller.title = "Users"
         return controller
+    }
+    
+    func makeUserDetailCoordinator(
+        navigation: UINavigationController
+    ) -> Coordinator {
+        let userDetailFactory = UserDetailFactoryImpl()
+        return UserDetailCoordinator(
+            navigation: navigation,
+            factory: userDetailFactory
+        )
     }
 }
